@@ -1,17 +1,18 @@
 import "./App.css";
 import { useState } from "react";
 
-
-
 const Header = () => {
-  const[toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(true);
   const handleClick = () => {
-    setToggle(!toggle)
-  }
-  
+    setToggle(!toggle);
+  };
+
   return (
     <>
-      <div className="activeMenu" style={{display:toggle ? "none" : "block" }}>
+      <div
+        className="activeMenu"
+        style={{ display: toggle ? "none" : "block" }}
+      >
         <div>
           <span>Item 1</span>
           <span>
@@ -64,7 +65,6 @@ const Nav = () => {
 };
 
 const Content = () => {
-
   return (
     <div className="Content">
       <div className="box">
@@ -84,33 +84,36 @@ const Content = () => {
 };
 
 const Footer = () => {
-  const[toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(true);
   const handleClick = () => {
-    setToggle(!toggle)
-  }
-  
+    setToggle(!toggle);
+  };
+
   return (
-  <footer>
-    <div className="footer">
-      <p onClick={handleClick}>Call to Action</p>
-    </div>
-    <div className="main-body" style={{ visibility: toggle ? "hidden" : "visible"}} >
-    <section className="Content">
-    <div className="box">
-      <center>Content Box 5</center>
-    </div>
-    <div className="box">
-      <center>Content Box 6</center>
-    </div>
-    <div className="box">
-      <center>Content Box 7</center>
-    </div>
-    <div className="box">
-      <center>Content Box 8</center>
-    </div>
-    </section>
-    </div>
-  </footer>
+    <footer>
+      <div className="footer">
+        <p onClick={handleClick}>Call to Action</p>
+      </div>
+      <div
+        className="main-body"
+        style={{ visibility: toggle ? "hidden" : "visible" }}
+      >
+        <section className="Content">
+          <div className="box">
+            <center>Content Box 5</center>
+          </div>
+          <div className="box">
+            <center>Content Box 6</center>
+          </div>
+          <div className="box">
+            <center>Content Box 7</center>
+          </div>
+          <div className="box">
+            <center>Content Box 8</center>
+          </div>
+        </section>
+      </div>
+    </footer>
   );
 };
 
