@@ -65,21 +65,19 @@ const Nav = () => {
 };
 
 const Content = () => {
+  const box = [
+    "Content Box 1",
+    "Content Box 2",
+    "Content Box 3",
+    "Content Box 4",
+  ];
+
   return (
-    <div className="Content">
-      <div className="box">
-        <center>Content Box 1</center>
-      </div>
-      <div className="box">
-        <center>Content Box 2</center>
-      </div>
-      <div className="box">
-        <center>Content Box 3</center>
-      </div>
-      <div className="box">
-        <center>Content Box 4</center>
-      </div>
-    </div>
+    <section className="Content">
+      {box.map((box) => (
+        <center className="box">{box}</center>
+      ))}
+    </section>
   );
 };
 
@@ -88,6 +86,13 @@ const Footer = () => {
   const handleClick = () => {
     setToggle(!toggle);
   };
+
+  const box = [
+    "Content Box 5",
+    "Content Box 6",
+    "Content Box 7",
+    "Content Box 8",
+  ];
 
   return (
     <footer>
@@ -99,18 +104,9 @@ const Footer = () => {
         style={{ visibility: toggle ? "hidden" : "visible" }}
       >
         <section className="Content">
-          <div className="box">
-            <center>Content Box 5</center>
-          </div>
-          <div className="box">
-            <center>Content Box 6</center>
-          </div>
-          <div className="box">
-            <center>Content Box 7</center>
-          </div>
-          <div className="box">
-            <center>Content Box 8</center>
-          </div>
+          {box.map((box) => (
+            <center className="box">{box}</center>
+          ))}
         </section>
       </div>
     </footer>
